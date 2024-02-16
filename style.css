@@ -103,21 +103,21 @@ nav #nav-right h4 {
 }
 .part-2 {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   position: relative;
   z-index: 20;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
   /* background-color: green; */
 }
 .front-img {
   position: absolute;
-  width: 40%;
-  height: 90%;
+  width: 35%;
+  height: 600px;
   /* background-color: green; */
   z-index: 9;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -160,4 +160,48 @@ nav #nav-right h4 {
 }
 .letters h2:nth-child(3) {
   padding-left: 80%;
+}
+.left-images {
+  width: 33%;
+  height: 70%;
+  position: absolute;
+  left: 0%;
+  bottom: -100%;
+}
+.side-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.la-top {
+  width: 100%;
+  height: 65vh;
+}
+.la-btm {
+  width: 100%;
+  height: 35vh;
+  margin-top: 30px;
+}
+.right-images {
+  width: 33%;
+  height: 70%;
+  position: absolute;
+  right: 0%;
+  top: -100%;
+}
+.ra-top {
+  width: 100%;
+  height: 35vh;
+}
+.ra-btm {
+  width: 100%;
+  height: 65vh;
+  margin-top: 30px;
+}
+.part-2 > h4 {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
 }

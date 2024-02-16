@@ -18,11 +18,11 @@ const loder = () => {
     display: "none",
     ease: "power4.out",
   });
-  // tl.to(".front-img", {
-  //   //  clipPath: `polygon(0 100%, 100% 100%, 100% 0, 0 0)`,
-  //   height: "90%",
-  //   duration: 3,
-  // });
+  tl.to(".front-img", {
+    //  clipPath: `polygon(0 100%, 100% 100%, 100% 0, 0 0)`,
+    // height: "90%",
+    duration: 1,
+  });
   tl.from("nav", {
     y: "-100",
     // delay: 0.8,
@@ -31,16 +31,43 @@ const loder = () => {
 loder();
 const tl2 = gsap.timeline({
   scrollTrigger: {
-    trigger: "#conatiner-first>.part-2",
+    trigger: "#container-first>.part-2",
     scroller: "body",
     start: "0% -20%",
-    end: "100% -200%",
+    end: "100% -500%",
     markers: true,
     scrub: 1,
     pin: true,
   },
 });
-tl2.to(".front-img", {
-  width: "35%",
-  height: "70vh",
-});
+tl2
+  .to(
+    ".front-img",
+    {
+      width: "30%",
+      height: "70vh",
+      top: "25%",
+    },
+    "a"
+  )
+  .to(
+    ".front-img>img",
+    {
+      scale: 1,
+    },
+    "a"
+  )
+  .to(
+    ".part-2>.left-images",
+    {
+      bottom: "33%",
+    },
+    "a"
+  )
+  .to(
+    ".part-2>.right-images",
+    {
+      top: "53%",
+    },
+    "a"
+  );
