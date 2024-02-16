@@ -20,8 +20,8 @@ const loder = () => {
   });
   tl.to(".front-img", {
     //  clipPath: `polygon(0 100%, 100% 100%, 100% 0, 0 0)`,
-    // height: "90%",
-    duration: 1,
+    height: "90vh",
+    // duration: 1,
   });
   tl.from("nav", {
     y: "-100",
@@ -35,7 +35,7 @@ const tl2 = gsap.timeline({
     scroller: "body",
     start: "0% -20%",
     end: "100% -500%",
-    markers: true,
+    // markers: true,
     scrub: 1,
     pin: true,
   },
@@ -62,12 +62,12 @@ tl2
     {
       bottom: "33%",
     },
-    "a"
+    "b"
   )
   .to(
     ".part-2>.right-images",
     {
       top: "53%",
     },
-    "a"
+    "b"
   );
