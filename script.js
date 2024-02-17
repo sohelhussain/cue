@@ -82,7 +82,7 @@ const containerSecondAnimation = () => {
       scroller: "body",
       start: "top top",
       end: "100% top",
-  
+
       scrub: 1,
       // markers: true,
     },
@@ -109,14 +109,14 @@ const containerSecondAnimation = () => {
       },
       "a"
     );
-  
+
   let contWords = "";
   const secPara = document.querySelector(`.text-write>p`);
   secPara.textContent.split("").forEach((words) => {
     contWords += `<span>${words}</span>`;
   });
   secPara.innerHTML = contWords;
-  
+
   gsap.to(".text-write p span", {
     color: `#ff3227`,
     stagger: 1,
@@ -129,5 +129,19 @@ const containerSecondAnimation = () => {
       scrub: 1,
     },
   });
-}
+};
 containerSecondAnimation();
+
+gsap.to(".text-line-up h1", {
+  y: "0%",
+  stagger:{
+    amount:1
+  },
+  scrollTrigger: {
+    trigger: "#container-third",
+    scroller: "body",
+    start: "0% 0%",
+    end: "100% -100%",
+    markers: true,
+  },
+});
