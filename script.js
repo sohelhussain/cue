@@ -29,45 +29,105 @@ const loder = () => {
   });
 };
 loder();
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#container-first>.part-2",
-    scroller: "body",
-    start: "0% -20%",
-    end: "100% -500%",
-    // markers: true,
-    scrub: 1,
-    pin: true,
-  },
-});
-tl2
-  .to(
-    ".front-img",
-    {
-      width: "30%",
-      height: "70vh",
-      top: "25%",
+const part2Animation = () => {
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#container-first>.part-2",
+      scroller: "body",
+      start: "0% -20%",
+      end: "100% -500%",
+      // markers: true,
+      scrub: 1,
+      pin: true,
     },
-    "a"
-  )
-  .to(
-    ".front-img>img",
-    {
-      scale: 1,
+  });
+  tl2
+    .to(
+      ".front-img",
+      {
+        width: "30%",
+        height: "70vh",
+        top: "25%",
+      },
+      "a"
+    )
+    .to(
+      ".front-img>img",
+      {
+        scale: 1,
+      },
+      "a"
+    )
+    .to(
+      ".part-2>.left-images",
+      {
+        bottom: "27%",
+      },
+      "b"
+    )
+    .to(
+      ".part-2>.right-images",
+      {
+        top: "25%",
+      },
+      "b"
+    );
+};
+part2Animation();
+
+const containerSecondAnimation = () => {
+  const textmovver = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#container-second",
+      scroller: "body",
+      start: "top top",
+      end: "100% top",
+  
+      scrub: 1,
+      // markers: true,
     },
-    "a"
-  )
-  .to(
-    ".part-2>.left-images",
-    {
-      bottom: "33%",
+  });
+  textmovver
+    .to(
+      "#txtimg",
+      {
+        right: "40%",
+      },
+      "a"
+    )
+    .to(
+      ".txtimg",
+      {
+        left: "33%",
+      },
+      "a"
+    )
+    .to(
+      ".txt>h1",
+      {
+        left: "25%",
+      },
+      "a"
+    );
+  
+  let contWords = "";
+  const secPara = document.querySelector(`.text-write>p`);
+  secPara.textContent.split("").forEach((words) => {
+    contWords += `<span>${words}</span>`;
+  });
+  secPara.innerHTML = contWords;
+  
+  gsap.to(".text-write p span", {
+    color: `#ff3227`,
+    stagger: 1,
+    scrollTrigger: {
+      trigger: "#container-second",
+      scroller: "body",
+      start: "top top",
+      end: "100 -300%",
+      pin: true,
+      scrub: 1,
     },
-    "b"
-  )
-  .to(
-    ".part-2>.right-images",
-    {
-      top: "53%",
-    },
-    "b"
-  );
+  });
+}
+containerSecondAnimation();

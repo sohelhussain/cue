@@ -47,6 +47,7 @@ body {
   position: relative;
   background-color: var(--secondry);
   /* background-color: greenyellow; */
+  /* display: none; */
 }
 nav {
   width: 100%;
@@ -58,6 +59,7 @@ nav {
   justify-content: space-between;
   position: absolute;
   z-index: 99;
+  /* display: none; */
 }
 nav #nav-left h4 {
   font-family: "m-midium";
@@ -103,13 +105,12 @@ nav #nav-right h4 {
 }
 .part-2 {
   width: 100%;
-  height: 120vh;
+  min-height: 150vh;
   position: relative;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: green; */
 }
 .front-img {
   position: absolute;
@@ -202,11 +203,87 @@ nav #nav-right h4 {
 .part-2 > h4 {
   position: absolute;
   left: 50%;
-  bottom: 0%;
+  bottom: 20%;
   transform: translate(-50%, 0%);
   color: var(--prime);
   font-family: m-bold;
   text-transform: uppercase;
   font-size: 1vw;
   font-weight: 100;
+}
+/* -----------container-second------------------ */
+
+#container-second {
+  width: 100%;
+  height: 100vh;
+  padding: 0% 3vw;
+  background-color: var(--secondry);
+}
+.text-move {
+}
+.txt {
+  width: 100%;
+  height: 10vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#txtimg {
+  position: absolute;
+  right: 0%;
+}
+.txtimg {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+}
+.txtimg > h1 {
+  font-size: 8vw;
+  font-family: m-midium;
+  color: var(--prime);
+}
+.text-img-box {
+  width: 14vw;
+  height: 6vw;
+  margin-top: -13px;
+}
+.text-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.txt > h1 {
+  font-size: 8vw;
+  font-family: m-midium;
+  color: var(--prime);
+  text-transform: uppercase;
+  position: absolute;
+  right: 0%;
+}
+.text-write {
+  display: flex;
+  /* align-items: center; */
+  /* gap: 150px; */
+  margin-top: 10vw;
+}
+.text-write h4 {
+  color: var(--prime);
+  font-size: 1vw;
+  font-family: m-light;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  /* width: 15vw; */
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+}
+.text-write p span {
+  text-transform: uppercase;
+  font-family: m-midium;
+  font-size: 2.3vw;
+  line-height: 3vw;
+  color: #ebdcd1;
+  display: inline-block;
 }
