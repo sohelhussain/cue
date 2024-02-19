@@ -17,16 +17,13 @@ const loder = () => {
     duration: 0.8,
     display: "none",
     ease: "power4.out",
-  });
-  tl.to(".front-img", {
-    //  clipPath: `polygon(0 100%, 100% 100%, 100% 0, 0 0)`,
-    height: "90vh",
-    // duration: 1,
-  });
-  tl.from("nav", {
-    y: "-100",
-    // delay: 0.8,
-  });
+  })
+    .to(".front-img", {
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0 0%)",
+    })
+    .from("nav", {
+      y: "-100",
+    });
 };
 loder();
 const part2Animation = () => {
@@ -80,7 +77,7 @@ const containerSecondAnimation = () => {
     scrollTrigger: {
       trigger: "#container-second",
       scroller: "body",
-      start: "top top",
+      start: "-100% top",
       end: "100% top",
 
       scrub: 1,
@@ -123,9 +120,9 @@ const containerSecondAnimation = () => {
     scrollTrigger: {
       trigger: "#container-second",
       scroller: "body",
-      start: "top top",
-      end: "100 -300%",
-      pin: true,
+      start: "-20% top",
+      end: "50% 0%",
+      // markers: true,
       scrub: 1,
     },
   });
@@ -133,7 +130,7 @@ const containerSecondAnimation = () => {
 containerSecondAnimation();
 
 const thirdAnimation = () => {
-  gsap.to(".text-line-up h1", {
+  gsap.to(".text-line-up h1, .text-line-up img", {
     y: "0%",
     stagger: {
       amount: 0.5,
@@ -170,6 +167,39 @@ gsap.to("#container-five .five-hed img, #container-five .five-hed h1", {
     end: "100% -100%",
   },
 });
+gsap.to("#container-five .image-div",{
+  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+  scrollTrigger:{
+    trigger: "#container-seven",
+    scroller: "body",
+    // markers: "true",
+    start: "30% 0%",
+    end: "100% 0%",
+    
+  }
+
+})
+gsap.to("#container-seven .five-hed img, #container-seven .five-hed h1", {
+  y: "0%",
+  scrollTrigger: {
+    trigger: "#container-seven",
+    scroller: "body",
+    start: "0% 0%",
+    end: "100% -100%",
+  },
+});
+gsap.to("#container-seven .image-div",{
+  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+  scrollTrigger:{
+    trigger: "#container-seven",
+    scroller: "body",
+    // markers: "true",
+    start: "30% 0%",
+    end: "100% 0%",
+    
+  }
+
+})
 gsap.to(".leter-move .letters h2:nth-child(1)", {
   x: "50%",
   scrollTrigger: {
@@ -197,7 +227,7 @@ gsap.to(".leter-move .letters h2:nth-child(3)", {
   scrollTrigger: {
     trigger: "#container-six",
     scroller: "body",
-    markers: true,
+    // markers: true,
     start: "20% 0%",
     end: "100% 0%",
     scrub: 1,
@@ -214,3 +244,15 @@ gsap.to(".cont-move-logo img", {
     scrub: 1,
   },
 });
+gsap.to("#container-eight .image-div",{
+  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+  scrollTrigger:{
+    trigger: "#container-eight",
+    scroller: "body",
+    // markers: "true",
+    start: "30% 0%",
+    end: "100% 0%",
+    
+  }
+
+})
