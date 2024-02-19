@@ -167,18 +167,16 @@ gsap.to("#container-five .five-hed img, #container-five .five-hed h1", {
     end: "100% -100%",
   },
 });
-gsap.to("#container-five .image-div",{
+gsap.to("#container-five .image-div", {
   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#container-seven",
     scroller: "body",
     // markers: "true",
     start: "30% 0%",
     end: "100% 0%",
-    
-  }
-
-})
+  },
+});
 gsap.to("#container-seven .five-hed img, #container-seven .five-hed h1", {
   y: "0%",
   scrollTrigger: {
@@ -188,18 +186,16 @@ gsap.to("#container-seven .five-hed img, #container-seven .five-hed h1", {
     end: "100% -100%",
   },
 });
-gsap.to("#container-seven .image-div",{
+gsap.to("#container-seven .image-div", {
   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#container-seven",
     scroller: "body",
     // markers: "true",
     start: "30% 0%",
     end: "100% 0%",
-    
-  }
-
-})
+  },
+});
 gsap.to(".leter-move .letters h2:nth-child(1)", {
   x: "50%",
   scrollTrigger: {
@@ -244,15 +240,27 @@ gsap.to(".cont-move-logo img", {
     scrub: 1,
   },
 });
-gsap.to("#container-eight .image-div",{
+gsap.to("#container-eight .image-div", {
   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#container-eight",
     scroller: "body",
     // markers: "true",
     start: "30% 0%",
     end: "100% 0%",
-    
-  }
-
-})
+  },
+});
+const ter = gsap.timeline();
+ter
+.to(".images-inner-count:nth-child(1)", {
+  x: "-600%",
+  duration:15,
+  // repeat:-1,
+  ease: "linear",
+},"sam")
+.to(".images-inner-count:nth-child(2)", {
+  x: "-600%",
+  duration:15,
+  // repeat:-1,
+  ease: "linear",
+},);
