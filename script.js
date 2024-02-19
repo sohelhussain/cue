@@ -132,16 +132,85 @@ const containerSecondAnimation = () => {
 };
 containerSecondAnimation();
 
-gsap.to(".text-line-up h1", {
+const thirdAnimation = () => {
+  gsap.to(".text-line-up h1", {
+    y: "0%",
+    stagger: {
+      amount: 0.5,
+    },
+    scrollTrigger: {
+      trigger: "#container-third",
+      scroller: "body",
+      start: "0% 0%",
+      end: "100% -100%",
+    },
+  });
+};
+thirdAnimation();
+const fourthAnimation = () => {
+  gsap.to(".inner-four", {
+    transform: `translateX(-200%)`,
+    scrollTrigger: {
+      trigger: "#container-four",
+      scroller: "body",
+      start: "0% 0%",
+      end: "100% -300%",
+      pin: true,
+      scrub: true,
+    },
+  });
+};
+fourthAnimation();
+gsap.to("#container-five .five-hed img, #container-five .five-hed h1", {
   y: "0%",
-  stagger:{
-    amount:1
-  },
   scrollTrigger: {
-    trigger: "#container-third",
+    trigger: "#container-five",
     scroller: "body",
     start: "0% 0%",
     end: "100% -100%",
+  },
+});
+gsap.to(".leter-move .letters h2:nth-child(1)", {
+  x: "50%",
+  scrollTrigger: {
+    trigger: "#container-six",
+    scroller: "body",
+    // markers:true,
+    start: "0% 0%",
+    end: "100% 0%",
+    scrub: 1,
+  },
+});
+gsap.to(".leter-move .letters h2:nth-child(2)", {
+  x: "50%",
+  scrollTrigger: {
+    trigger: "#container-six",
+    scroller: "body",
+    // markers: true,
+    start: "10% 0%",
+    end: "100% 0%",
+    scrub: 1,
+  },
+});
+gsap.to(".leter-move .letters h2:nth-child(3)", {
+  x: "50%",
+  scrollTrigger: {
+    trigger: "#container-six",
+    scroller: "body",
     markers: true,
+    start: "20% 0%",
+    end: "100% 0%",
+    scrub: 1,
+  },
+});
+gsap.to(".cont-move-logo img", {
+  x: "2%",
+  scrollTrigger: {
+    trigger: "#container-six",
+    scroller: "body",
+    // markers:true,
+    start: "-50% 0%",
+    end: "100% 100%",
+    scrub: 1,
   },
 });
