@@ -170,7 +170,7 @@ gsap.to("#container-five .five-hed img, #container-five .five-hed h1", {
 gsap.to("#container-five .image-div", {
   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
   scrollTrigger: {
-    trigger: "#container-seven",
+    trigger: "#container-five",
     scroller: "body",
     // markers: "true",
     start: "30% 0%",
@@ -245,8 +245,7 @@ gsap.to("#container-eight .image-div", {
   scrollTrigger: {
     trigger: "#container-eight",
     scroller: "body",
-    // markers: "true",
-    start: "30% 0%",
+    start: "-20% 0%",
     end: "100% 0%",
   },
 });
@@ -261,3 +260,27 @@ ter.to(
   },
   "sam"
 );
+
+const twelfth = () => {
+  const txt = document.querySelector(".top-txt h1");
+  let cluter = "";
+  txt.textContent.split("").forEach((words) => {
+    cluter += `<span>${words}</span>`;
+  });
+  txt.innerHTML = cluter;
+  console.log(cluter);
+  gsap.to(".top-txt h1 span", {
+    color: `var(--prime)`,
+    stagger: {
+      amount: 1,
+    },
+    scrollTrigger: {
+      trigger: "#container-eleven",
+      scroller: "body",
+      start: "50% 0%",
+      end: "100% 0%",
+      scrub: 1,
+    },
+  });
+};
+twelfth();
