@@ -251,16 +251,13 @@ gsap.to("#container-eight .image-div", {
   },
 });
 const ter = gsap.timeline();
-ter
-.to(".images-inner-count:nth-child(1)", {
-  x: "-600%",
-  duration:15,
-  // repeat:-1,
-  ease: "linear",
-},"sam")
-.to(".images-inner-count:nth-child(2)", {
-  x: "-600%",
-  duration:15,
-  // repeat:-1,
-  ease: "linear",
-},);
+ter.to(
+  ".images-cover",
+  {
+    x: "-600%",
+    duration: 15,
+    repeat: -1,
+    ease: "linear",
+  },
+  "sam"
+);

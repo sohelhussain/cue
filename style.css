@@ -48,7 +48,7 @@ body {
   position: relative;
   background-color: var(--secondry);
   /* background-color: greenyellow; */
-  display: none;
+  /* display: none; */
 }
 nav {
   width: 100%;
@@ -60,7 +60,7 @@ nav {
   justify-content: space-between;
   position: absolute;
   z-index: 99;
-  display: none;
+  /* display: none; */
 }
 nav #nav-left h4 {
   font-family: "m-midium";
@@ -212,7 +212,7 @@ nav #nav-right h4 {
   height: 100vh;
   padding: 0% 3vw;
   background-color: var(--secondry);
-  display: none;
+  /* display: none; */
 }
 .txt {
   width: 100%;
@@ -282,7 +282,7 @@ nav #nav-right h4 {
   background-color: var(--prime);
   padding-top: 8vw;
   padding-left: 3vw;
-  display: none;
+  /* display: none; */
 }
 .text-line-up {
   height: 9vw;
@@ -308,7 +308,7 @@ nav #nav-right h4 {
   background-color: var(--prime);
   white-space: nowrap;
   padding: 100px 0px 20px 0px;
-  display: none;
+  /* display: none; */
 }
 .inner-four {
   width: 100%;
@@ -431,7 +431,7 @@ nav #nav-right h4 {
   min-height: 100vh;
   background-color: var(--secondry);
   padding: 3vw;
-  display: none;
+  /* display: none; */
 }
 #container-five .five-hed {
   display: flex;
@@ -557,7 +557,7 @@ nav #nav-right h4 {
   background-color: var(--secondry);
   padding-top: 8%;
   position: relative;
-  display: none;
+  /* display: none; */
 }
 .cont-move-logo img {
   width: 65vw;
@@ -822,7 +822,7 @@ nav #nav-right h4 {
   white-space: nowrap;
 }
 .images-inner-count:nth-child(2) {
-  transform: translateX(500%);
+  transform: translateX(299%);
 }
 .img-count {
   width: 50%;
