@@ -138,7 +138,7 @@ const thirdAnimation = () => {
     scrollTrigger: {
       trigger: "#container-third",
       scroller: "body",
-      start: "0% 0%",
+      start: "0% 40%",
       end: "100% -100%",
     },
   });
